@@ -1,4 +1,6 @@
 call plug#begin('~/.vim/plugged')
+"starting menu
+Plug 'mhinz/vim-startify'
 " Files tree
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/nerdfont.vim'
