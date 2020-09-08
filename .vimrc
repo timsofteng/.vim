@@ -12,7 +12,7 @@ source $HOME/.vim/plug-config/coc.vim
 source $HOME/.vim/plug-config/lsc.vim
 source $HOME/.vim/plug-config/ale.vim
 source $HOME/.vim/plug-config/fern.vim
-source $HOME/.vim/plug-config/vim_git_session.vim
+"source $HOME/.vim/plug-config/vim_git_session.vim
 
 "set vim plugins
 source $HOME/.vim/vim-plug/plugins.vim
