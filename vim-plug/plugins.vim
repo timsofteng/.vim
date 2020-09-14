@@ -12,7 +12,7 @@ Plug 'voldikss/vim-floaterm'
 "closing buffer without closing window
 Plug 'qpkorr/vim-bufkill'
 "autocomletion
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 
 "Plug 'natebosch/vim-lsc'
@@ -73,9 +73,8 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'airblade/vim-rooter'
 
 "sessions
-Plug 'chrisallenlane/vim-git-session'
+"Plug 'chrisallenlane/vim-git-session'
 
-"Plug 'spolu/dwm.vim'
 
 "Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 

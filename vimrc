@@ -9,7 +9,7 @@ source $HOME/.vim/plug-config/fugitive.vim
 source $HOME/.vim/plug-config/ctrlsf.vim
 source $HOME/.vim/plug-config/closetag.vim
 source $HOME/.vim/plug-config/coc.vim
-source $HOME/.vim/plug-config/lsc.vim
+"source $HOME/.vim/plug-config/lsc.vim
 source $HOME/.vim/plug-config/ale.vim
 source $HOME/.vim/plug-config/fern.vim
 source $HOME/.vim/plug-config/startify.vim
