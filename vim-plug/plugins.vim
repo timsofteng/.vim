@@ -1,8 +1,8 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/vim/plugged')
 "starting menu
 Plug 'mhinz/vim-startify'
 " Files tree
-Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern.vim', { 'branch': 'restore-focus' }
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/glyph-palette.vim'
@@ -12,8 +12,9 @@ Plug 'voldikss/vim-floaterm'
 "closing buffer without closing window
 Plug 'qpkorr/vim-bufkill'
 "autocomletion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'dense-analysis/ale'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'dense-analysis/ale'
+Plug 'neomake/neomake'
 
 "Plug 'natebosch/vim-lsc'
 "Plug 'ajh17/VimCompletesMe'
@@ -45,8 +46,8 @@ Plug 'tpope/vim-repeat'
 "Gina git [experimental]
 Plug 'lambdalisue/gina.vim'
 "--->>>изменения в файле в сравнении с git
-Plug 'airblade/vim-gitgutter'
-"Plug 'mhinz/vim-signify'
+"Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 "Save session according to git
 "Plug 'superDross/ticket.vim'
 "--->>>поиск файлов

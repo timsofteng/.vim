@@ -1,22 +1,27 @@
+"Install vim plug
+if empty(glob("~/.vim/autoload/plug.vim"))
+    execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
 
 "Plugins configs
 "source $HOME/.vim/plug-config/fzf.vim
-source $HOME/.vim/plug-config/clap.vim
-source $HOME/.vim/plug-config/floaterm.vim
-source $HOME/.vim/plug-config/repeat.vim
-source $HOME/.vim/plug-config/ticket.vim
-source $HOME/.vim/plug-config/fugitive.vim
-source $HOME/.vim/plug-config/ctrlsf.vim
-source $HOME/.vim/plug-config/closetag.vim
-source $HOME/.vim/plug-config/coc.vim
+source $HOME/.config/vim/plug-config/clap.vim
+source $HOME/.config/vim/plug-config/floaterm.vim
+source $HOME/.config/vim/plug-config/repeat.vim
+source $HOME/.config/vim/plug-config/ticket.vim
+source $HOME/.config/vim/plug-config/fugitive.vim
+source $HOME/.config/vim/plug-config/ctrlsf.vim
+source $HOME/.config/vim/plug-config/closetag.vim
+source $HOME/.config/vim/plug-config/coc.vim
 "source $HOME/.vim/plug-config/lsc.vim
-source $HOME/.vim/plug-config/ale.vim
-source $HOME/.vim/plug-config/fern.vim
-source $HOME/.vim/plug-config/startify.vim
+source $HOME/.config/vim/plug-config/ale.vim
+source $HOME/.config/vim/plug-config/fern.vim
+source $HOME/.config/vim/plug-config/startify.vim
 
 "set vim plugins
-source $HOME/.vim/vim-plug/plugins.vim
+source $HOME/.config/vim/vim-plug/plugins.vim
 
+source $HOME/.config/vim/plug-config/neomake.vim
 " Edit vimr configuration file
 nnoremap confe :vs $MYVIMRC<CR>
 " Reload vims configuration file
