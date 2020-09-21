@@ -27,7 +27,7 @@ nnoremap confe :vs $MYVIMRC<CR>
 " Reload vims configuration file
 nnoremap confr :source $MYVIMRC<CR>
 "vimplug
-nnoremap vimplug :vs ~/.vim/vim-plug/plugins.vim<CR>
+nnoremap vimplug :vs ~/.config/vim/vim-plug/plugins.vim<CR>
 
 set autoread " detect when a file is changed
 "au BufEnter * :checktime

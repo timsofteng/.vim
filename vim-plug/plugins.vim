@@ -13,7 +13,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'qpkorr/vim-bufkill'
 "autocomletion
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 Plug 'neomake/neomake'
 
 "Plug 'natebosch/vim-lsc'
@@ -57,7 +57,7 @@ Plug 'liuchengxu/vim-clap'
 "--->>>Панель состояния
 Plug 'vim-airline/vim-airline'
 "--->>>Prettier
-"Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+"Plug 'prettier/vim-prettier'
 
 "solarized themes
 Plug 'lifepillar/vim-solarized8'
