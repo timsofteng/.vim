@@ -3,6 +3,9 @@ if empty(glob("~/.vim/autoload/plug.vim"))
     execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
 endif
 
+"set vim plugins
+source $HOME/.config/vim/vim-plug/plugins.vim
+
 "Plugins configs
 "source $HOME/.vim/plug-config/fzf.vim
 source $HOME/.config/vim/plug-config/clap.vim
@@ -17,9 +20,8 @@ source $HOME/.config/vim/plug-config/coc.vim
 source $HOME/.config/vim/plug-config/ale.vim
 source $HOME/.config/vim/plug-config/fern.vim
 source $HOME/.config/vim/plug-config/startify.vim
+source $HOME/.config/vim/plug-config/project.vim
 
-"set vim plugins
-source $HOME/.config/vim/vim-plug/plugins.vim
 
 source $HOME/.config/vim/plug-config/neomake.vim
 " Edit vimr configuration file

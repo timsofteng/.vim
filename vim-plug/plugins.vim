@@ -32,7 +32,7 @@ Plug 'tomtom/tcomment_vim'
 "--->>>парные ковычки
 Plug 'jiangmiao/auto-pairs'
 "html matched tags highlight
-"Plug 'leafOfTree/vim-matchtag'
+Plug 'leafOfTree/vim-matchtag'
 "autoclosing tags
 Plug 'alvan/vim-closetag'
 "jump beetwen tags
@@ -75,11 +75,14 @@ Plug 'airblade/vim-rooter'
 
 "sessions
 "Plug 'chrisallenlane/vim-git-session'
-
+Plug 'leafOfTree/vim-project'
 
 "Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 "Debug
 "Plug 'tyru/capture.vim'
 " Initialize plugin system
+
+"neovim only
+"Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
