@@ -1,4 +1,4 @@
-call plug#begin('~/.config/vim/plugged')
+call plug#begin('~/.vim/plugged')
 "starting menu
 Plug 'mhinz/vim-startify'
 " Files tree

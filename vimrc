@@ -7,7 +7,6 @@ if empty(glob("~/.vim/autoload/plug.vim"))
     execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
 endif
 
-
 "set vim plugins
 source $HOME/.vim/vim-plug/plugins.vim
 
@@ -27,13 +26,13 @@ source $HOME/.vim/plug-config/fern.vim
 source $HOME/.vim/plug-config/startify.vim
 source $HOME/.vim/plug-config/project.vim
 "source $HOME/.vim/plug-config/neomake.vim
-"
+
 " Edit vimr configuration file
 nnoremap confe :vs $MYVIMRC<CR>
 " Reload vims configuration file
 nnoremap confr :source $MYVIMRC<CR>
 "vimplug
-nnoremap vimplug :vs ~/.config/vim/vim-plug/plugins.vim<CR>
+nnoremap vimplug :vs ~/.vim/vim-plug/plugins.vim<CR>
 
 set autoread " detect when a file is changed
 "au BufEnter * :checktime
