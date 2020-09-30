@@ -2,7 +2,7 @@ call plug#begin('~/.config/vim/plugged')
 "starting menu
 Plug 'mhinz/vim-startify'
 " Files tree
-Plug 'lambdalisue/fern.vim', { 'branch': 'restore-focus' }
+Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/glyph-palette.vim'
