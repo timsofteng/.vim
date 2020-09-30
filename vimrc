@@ -1,7 +1,11 @@
 "Install vim plug
-if empty(glob("~/.vim/autoload/plug.vim"))
-    execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+if empty(glob("~/.config/vim/autoload/plug.vim"))
+    execute '!curl -fLo ~/.config/vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
 endif
+
+set runtimepath-=~/.vim runtimepath-=~/.vim/after
+set runtimepath^=~/.config/vim
+set runtimepath+=~/.config/vim
 
 "set vim plugins
 source $HOME/.config/vim/vim-plug/plugins.vim
