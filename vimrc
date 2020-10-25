@@ -1,6 +1,13 @@
 "set runtimepath-=~/.vim runtimepath-=~/.vim/after
 "set runtimepath^=~/.config/vim
 "set runtimepath+=~/.config/vim
+ 
+" Edit vimr configuration file
+nnoremap confe :vs $MYVIMRC<CR>
+" Reload vims configuration file
+nnoremap confr :source $MYVIMRC<CR>
+"vimplug
+nnoremap vimplug :vs ~/.vim/vim-plug/plugins.vim<CR>
 
 "Install vim plug
 if empty(glob("~/.vim/autoload/plug.vim"))
@@ -14,9 +21,6 @@ source $HOME/.vim/vim-plug/plugins.vim
 "source $HOME/.vim/plug-config/fzf.vim
 source $HOME/.vim/plug-config/clap.vim
 source $HOME/.vim/plug-config/floaterm.vim
-source $HOME/.vim/plug-config/repeat.vim
-source $HOME/.vim/plug-config/ticket.vim
-source $HOME/.vim/plug-config/fugitive.vim
 source $HOME/.vim/plug-config/ctrlsf.vim
 source $HOME/.vim/plug-config/closetag.vim
 source $HOME/.vim/plug-config/coc.vim
@@ -24,15 +28,11 @@ source $HOME/.vim/plug-config/coc.vim
 source $HOME/.vim/plug-config/ale.vim
 source $HOME/.vim/plug-config/fern.vim
 source $HOME/.vim/plug-config/startify.vim
-source $HOME/.vim/plug-config/project.vim
+source $HOME/.vim/plug-config/signify.vim
+source $HOME/.vim/plug-config/crystalline.vim
+"source $HOME/.vim/plug-config/project.vim
 "source $HOME/.vim/plug-config/neomake.vim
 
-" Edit vimr configuration file
-nnoremap confe :vs $MYVIMRC<CR>
-" Reload vims configuration file
-nnoremap confr :source $MYVIMRC<CR>
-"vimplug
-nnoremap vimplug :vs ~/.vim/vim-plug/plugins.vim<CR>
 
 set autoread " detect when a file is changed
 "au BufEnter * :checktime
@@ -61,8 +61,8 @@ set hlsearch " highlight search results
 set incsearch " set incremental search, like modern browsers
 
 "Apperance
-set number
-set relativenumber
+"set number
+"set relativenumber
 set linebreak " set soft wrapping
 set cursorline " Highlight the line currently under cursor
 "set ttyfast " faster redrawing
@@ -74,10 +74,6 @@ set updatetime=300
 " Display command line’s tab complete options as a menu
 set wildmenu
 
-" Buffers line
-"let g:airline#extensions#tabline#enabled = 1
-
-
 "For correct appear in st-term
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -85,9 +81,10 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 "set t_Co=256
 " Colorscheme
-"set background=dark
-set background=light
-colorscheme solarized8
+set background=dark
+"set background=light
+"colorscheme solarized8
+colorscheme gruvbox
 
 set encoding=utf-8
 " Set font competable with icons
@@ -110,20 +107,6 @@ nnoremap <Leader>d :BD <CR>
 "remap leader key
 "let mapleader="'"
 
-
-" augroup my-glyph-palette
-"     autocmd! *
-"       autocmd FileType fern call glyph_palette#apply()
-"         autocmd FileType nerdtree,startify call glyph_palette#apply()
-"       augroup END
-
-"let g:fern_git_status#disable_submodules = 1
-"let g:fern_git_status#disable_directories = 1
-"let g:fern_git_status#disable_ignored = 1
-"let g:fern_git_status#disable_untracked = 1
-
-"для Prettier
-nnoremap <Leader>p :Prettier<CR>
 "js
 hi def link jsObjectKey Type
 
@@ -131,7 +114,6 @@ hi def link jsObjectKey Type
 let g:vim_vue_plugin_use_scss = 1
 let g:vim_vue_plugin_load_full_syntax = 1
 let g:vim_vue_plugin_highlight_vue_attr = 1
-let g:vim_vue_plugin_highlight_vue_keyword = 1
 
 "css colors
 let g:Hexokinase_highlighters = [ 'sign_column' ]
