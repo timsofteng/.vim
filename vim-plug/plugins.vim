@@ -12,7 +12,7 @@ Plug 'voldikss/vim-floaterm'
 "closing buffer without closing window
 Plug 'qpkorr/vim-bufkill'
 "autocomletion
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 "Plug 'neomake/neomake'
 
