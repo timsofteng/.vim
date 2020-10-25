@@ -51,6 +51,8 @@ Plug 'mhinz/vim-signify'
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vim-clap'
+"helper for 'f' searching
+Plug 'unblevable/quick-scope'
 "--->>>Панель состояния
 Plug 'rbong/vim-crystalline'
 

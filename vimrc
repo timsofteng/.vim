@@ -9,6 +9,7 @@ nnoremap confr :source $MYVIMRC<CR>
 "vimplug
 nnoremap vimplug :vs ~/.vim/vim-plug/plugins.vim<CR>
 
+
 "Install vim plug
 if empty(glob("~/.vim/autoload/plug.vim"))
     execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
@@ -16,6 +17,7 @@ endif
 
 "set vim plugins
 source $HOME/.vim/vim-plug/plugins.vim
+
 
 "Plugins configs
 "source $HOME/.vim/plug-config/fzf.vim
@@ -27,6 +29,7 @@ source $HOME/.vim/plug-config/coc.vim
 "source $HOME/.vim/plug-config/lsc.vim
 source $HOME/.vim/plug-config/ale.vim
 source $HOME/.vim/plug-config/fern.vim
+source $HOME/.vim/plug-config/gina.vim
 source $HOME/.vim/plug-config/startify.vim
 source $HOME/.vim/plug-config/signify.vim
 source $HOME/.vim/plug-config/crystalline.vim
@@ -120,3 +123,7 @@ let g:Hexokinase_highlighters = [ 'sign_column' ]
 
 syntax enable
 syntax sync fromstart
+
+"for quickscope
+highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
