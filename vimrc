@@ -20,8 +20,8 @@ source $HOME/.vim/vim-plug/plugins.vim
 
 
 "Plugins configs
-"source $HOME/.vim/plug-config/fzf.vim
-source $HOME/.vim/plug-config/clap.vim
+source $HOME/.vim/plug-config/fzf.vim
+"source $HOME/.vim/plug-config/clap.vim
 source $HOME/.vim/plug-config/floaterm.vim
 source $HOME/.vim/plug-config/ctrlsf.vim
 source $HOME/.vim/plug-config/closetag.vim
@@ -33,6 +33,7 @@ source $HOME/.vim/plug-config/gina.vim
 source $HOME/.vim/plug-config/startify.vim
 source $HOME/.vim/plug-config/signify.vim
 source $HOME/.vim/plug-config/crystalline.vim
+source $HOME/.vim/plug-config/undotree.vim
 "source $HOME/.vim/plug-config/project.vim
 "source $HOME/.vim/plug-config/neomake.vim
 
@@ -111,7 +112,7 @@ nnoremap <Leader>d :BD <CR>
 "let mapleader="'"
 
 "js
-hi def link jsObjectKey Type
+"hi def link jsObjectKey Type
 
 "vue
 let g:vim_vue_plugin_use_scss = 1
@@ -124,6 +125,6 @@ let g:Hexokinase_highlighters = [ 'sign_column' ]
 syntax enable
 syntax sync fromstart
 
-"for quickscope
-highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
-highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+let g:vim_project_config = '~/.vim'
+
+call project#begin()

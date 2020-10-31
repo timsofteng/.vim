@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 "starting menu
-Plug 'mhinz/vim-startify'
+"Plug 'mhinz/vim-startify'
 " Files tree
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/nerdfont.vim'
@@ -12,7 +12,7 @@ Plug 'voldikss/vim-floaterm'
 "closing buffer without closing window
 Plug 'qpkorr/vim-bufkill'
 "autocomletion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 "Plug 'neomake/neomake'
 
@@ -48,13 +48,13 @@ Plug 'lambdalisue/gina.vim'
 "--->>>изменения в файле в сравнении с git
 Plug 'mhinz/vim-signify'
 "--->>>поиск файлов
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"Plug 'junegunn/fzf.vim'
-Plug 'liuchengxu/vim-clap'
-"helper for 'f' searching
-Plug 'unblevable/quick-scope'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+"Plug 'liuchengxu/vim-clap'
 "--->>>Панель состояния
 Plug 'rbong/vim-crystalline'
+
+Plug 'mbbill/undotree'
 
 "solarized themes
 Plug 'lifepillar/vim-solarized8'
@@ -75,9 +75,12 @@ Plug 'leafOfTree/vim-project'
 
 "Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
-"neovim only
-"Plug 'nvim-treesitter/nvim-treesitter'
-"
+if has('nvim')
+  Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'nvim-lua/completion-nvim'
+endif
+
 "Debug
 "Plug 'tyru/capture.vim'
 call plug#end()
