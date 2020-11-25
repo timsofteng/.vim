@@ -1,7 +1,10 @@
 "set runtimepath-=~/.vim runtimepath-=~/.vim/after
 "set runtimepath^=~/.config/vim
 "set runtimepath+=~/.config/vim
- 
+
+"ingore system locale
+language messages C
+
 " Edit vimr configuration file
 nnoremap confe :vs $MYVIMRC<CR>
 " Reload vims configuration file
@@ -25,7 +28,8 @@ source $HOME/.vim/plug-config/fzf.vim
 source $HOME/.vim/plug-config/floaterm.vim
 source $HOME/.vim/plug-config/ctrlsf.vim
 source $HOME/.vim/plug-config/closetag.vim
-source $HOME/.vim/plug-config/coc.vim
+"source $HOME/.vim/plug-config/coc.vim
+source $HOME/.vim/plug-config/mucomplete.vim
 "source $HOME/.vim/plug-config/lsc.vim
 source $HOME/.vim/plug-config/ale.vim
 source $HOME/.vim/plug-config/fern.vim
@@ -69,6 +73,7 @@ set incsearch " set incremental search, like modern browsers
 "set relativenumber
 set linebreak " set soft wrapping
 set cursorline " Highlight the line currently under cursor
+set scrolloff=5 "scroll page from 5 top/bottom line
 "set ttyfast " faster redrawing
 
 
@@ -88,7 +93,8 @@ set termguicolors
 set background=dark
 "set background=light
 "colorscheme solarized8
-colorscheme gruvbox
+colorscheme gruvbox8_soft
+"colorscheme gruvbox
 
 set encoding=utf-8
 " Set font competable with icons
@@ -103,11 +109,6 @@ vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 "disable highlighting by double Esc
 nnoremap <Esc><Esc> :noh <CR>
 
-"jumping between buffers
-nnoremap <Leader>n :bn <CR>
-nnoremap <Leader>p :bp <CR>
-nnoremap <Leader>d :BD <CR>
-
 "remap leader key
 "let mapleader="'"
 
@@ -119,12 +120,5 @@ let g:vim_vue_plugin_use_scss = 1
 let g:vim_vue_plugin_load_full_syntax = 1
 let g:vim_vue_plugin_highlight_vue_attr = 1
 
-"css colors
-let g:Hexokinase_highlighters = [ 'sign_column' ]
-
 syntax enable
 syntax sync fromstart
-
-let g:vim_project_config = '~/.vim'
-
-call project#begin()
