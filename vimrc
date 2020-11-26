@@ -13,14 +13,9 @@ nnoremap confr :source $MYVIMRC<CR>
 nnoremap vimplug :vs ~/.vim/vim-plug/plugins.vim<CR>
 
 
-"Install vim plug
-if empty(glob("~/.vim/autoload/plug.vim"))
-    execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
-endif
-
 "set vim plugins
-source $HOME/.vim/vim-plug/plugins.vim
-
+"source $HOME/.vim/vim-plug/plugins.vim
+source $HOME/.vim/plug-config/minpac.vim
 
 "Plugins configs
 source $HOME/.vim/plug-config/fzf.vim

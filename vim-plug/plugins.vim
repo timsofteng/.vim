@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 "starting menu
-Plug 'mhinz/vim-startify'
+"Plug 'mhinz/vim-startify'
 " Files tree
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
@@ -71,7 +71,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-gruvbox8'
 " --->>>  highlight
-Plug 'pangloss/vim-javascript/'
+Plug 'pangloss/vim-javascript'
 Plug 'leafOfTree/vim-vue-plugin'
 "Plug 'cakebaker/scss-syntax.vim'
 
@@ -89,6 +89,5 @@ if has('nvim')
   Plug 'nvim-lua/completion-nvim'
 endif
 
-"Debug
 "Plug 'tyru/capture.vim'
 call plug#end()
