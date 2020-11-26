@@ -7,6 +7,12 @@ if &compatible
   set nocompatible
 endif
 
+if empty(glob(substitute(&packpath, ",.*", "", "")."/pack/minpac/opt/minpac")) " {{{
+  call system("git clone --depth=1 https://github.com/k-takata/minpac ".
+        \ substitute(&packpath, ",.*", "", "")."/pack/minpac/opt/minpac")
+  autocmd VimEnter * silent! command! PackUpdate call PackInit() | call minpac#update() | echo "minpac:g INSTALLED"
+endif " }}}
+
 function! PackInit() abort
 packadd minpac
 

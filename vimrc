@@ -9,13 +9,9 @@ language messages C
 nnoremap confe :vs $MYVIMRC<CR>
 " Reload vims configuration file
 nnoremap confr :source $MYVIMRC<CR>
-"vimplug
-nnoremap vimplug :vs ~/.vim/vim-plug/plugins.vim<CR>
-
-
-"set vim plugins
-"source $HOME/.vim/vim-plug/plugins.vim
+"plug
 source $HOME/.vim/plug-config/minpac.vim
+
 
 "Plugins configs
 source $HOME/.vim/plug-config/fzf.vim
