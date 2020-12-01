@@ -52,6 +52,8 @@ call minpac#add('pangloss/vim-javascript')
 call minpac#add('leafOfTree/vim-vue-plugin')
 "call minpac#add('cakebaker/scss-syntax.vim')
 
+"call minpac#add('kristijanhusak/vim-js-file-import')
+
 if has('nvim')
 call minpac#add('nvim-treesitter/nvim-treesitter')
 call minpac#add('neovim/nvim-lspconfig')

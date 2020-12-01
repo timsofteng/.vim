@@ -63,6 +63,7 @@ set incsearch " set incremental search, like modern browsers
 "set number
 "set relativenumber
 set linebreak " set soft wrapping
+set smartindent
 set cursorline " Highlight the line currently under cursor
 set scrolloff=5 "scroll page from 5 top/bottom line
 "set ttyfast " faster redrawing
