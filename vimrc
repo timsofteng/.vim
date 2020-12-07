@@ -10,12 +10,12 @@ nnoremap confe :vs $MYVIMRC<CR>
 " Reload vims configuration file
 nnoremap confr :source $MYVIMRC<CR>
 "plug
-source $HOME/.vim/plug-config/minpac.vim
+source $HOME/.vim/vim-plug/plugins.vim
 
 
 "Plugins configs
-source $HOME/.vim/plug-config/fzf.vim
-"source $HOME/.vim/plug-config/clap.vim
+"source $HOME/.vim/plug-config/fzf.vim
+source $HOME/.vim/plug-config/clap.vim
 source $HOME/.vim/plug-config/floaterm.vim
 source $HOME/.vim/plug-config/ctrlsf.vim
 source $HOME/.vim/plug-config/closetag.vim

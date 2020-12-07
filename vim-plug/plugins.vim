@@ -26,8 +26,7 @@ Plug 'lifepillar/vim-mucomplete'
 "Plug 'mattn/vim-lsp-settings'
 "Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'prabirshrestha/asyncomplete-lsp.vim'
-
-"Linters
+"Linters 
 Plug 'dense-analysis/ale'
 "Plug 'neomake/neomake'
 
@@ -58,7 +57,9 @@ Plug 'mhinz/vim-signify'
 "--->>>поиск файлов
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Plug 'liuchengxu/vim-clap'
+
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+
 "--->>>Панель состояния
 Plug 'rbong/vim-crystalline'
 
