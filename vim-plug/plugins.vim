@@ -13,11 +13,11 @@ Plug 'lambdalisue/fern-git-status.vim'
 "Floating terminal
 Plug 'voldikss/vim-floaterm'
 
+Plug 'szw/vim-maximizer'
+
 "closing buffer without closing window
 "Plug 'qpkorr/vim-bufkill'
 
-"autocomletion
-Plug 'lifepillar/vim-mucomplete'
 
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'natebosch/vim-lsc'
@@ -27,8 +27,6 @@ Plug 'lifepillar/vim-mucomplete'
 "Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'prabirshrestha/asyncomplete-lsp.vim'
 "Linters 
-Plug 'dense-analysis/ale'
-"Plug 'neomake/neomake'
 
 "finder in single buffer
 Plug 'dyng/ctrlsf.vim'
@@ -54,11 +52,7 @@ Plug 'tpope/vim-repeat'
 Plug 'lambdalisue/gina.vim'
 "--->>>изменения в файле в сравнении с git
 Plug 'mhinz/vim-signify'
-"--->>>поиск файлов
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 
 "--->>>Панель состояния
 Plug 'rbong/vim-crystalline'
@@ -72,8 +66,8 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-gruvbox8'
 " --->>>  highlight
-Plug 'pangloss/vim-javascript'
-Plug 'leafOfTree/vim-vue-plugin'
+"Plug 'pangloss/vim-javascript'
+"Plug 'leafOfTree/vim-vue-plugin'
 "Plug 'cakebaker/scss-syntax.vim'
 
 " --->>> корневая дирректория проекта
@@ -84,10 +78,24 @@ Plug 'airblade/vim-rooter'
 
 "Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
+if !has('nvim')
+Plug 'dense-analysis/ale'
+"--->>>поиск файлов
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+"autocomletion
+Plug 'lifepillar/vim-mucomplete'
+
+endif
+
 if has('nvim')
   Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'neovim/nvim-lspconfig'
   Plug 'nvim-lua/completion-nvim'
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
 endif
 
 "Plug 'tyru/capture.vim'
