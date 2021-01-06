@@ -11,9 +11,12 @@ Plug 'lambdalisue/fern-git-status.vim'
 "Plug 'lambdalisue/glyph-palette.vim'
 
 "Floating terminal
-Plug 'voldikss/vim-floaterm'
+"Plug 'voldikss/vim-floaterm'
 
 Plug 'szw/vim-maximizer'
+
+"Tmux
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 "closing buffer without closing window
 "Plug 'qpkorr/vim-bufkill'
@@ -37,7 +40,7 @@ Plug 'tomtom/tcomment_vim'
 "--->>>парные ковычки
 Plug 'jiangmiao/auto-pairs'
 "html matched tags highlight
-Plug 'leafOfTree/vim-matchtag'
+"Plug 'leafOfTree/vim-matchtag'
 "autoclosing tags
 Plug 'alvan/vim-closetag'
 "jump beetwen tags
@@ -58,23 +61,21 @@ Plug 'mhinz/vim-signify'
 Plug 'rbong/vim-crystalline'
 
 "history tree
-Plug 'mbbill/undotree'
+"Plug 'mbbill/undotree'
 
 "solarized themes
-Plug 'lifepillar/vim-solarized8'
+"Plug 'lifepillar/vim-solarized8'
 "gruvbox theme
 Plug 'morhetz/gruvbox'
-Plug 'lifepillar/vim-gruvbox8'
-" --->>>  highlight
-"Plug 'pangloss/vim-javascript'
-"Plug 'leafOfTree/vim-vue-plugin'
-"Plug 'cakebaker/scss-syntax.vim'
+"Plug 'lifepillar/vim-gruvbox8'
 
 " --->>> корневая дирректория проекта
 Plug 'airblade/vim-rooter'
 
 "sessions
 "Plug 'leafOfTree/vim-project'
+Plug 'tpope/vim-obsession'
+Plug 'dhruvasagar/vim-prosession'
 
 "Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
@@ -83,10 +84,14 @@ Plug 'dense-analysis/ale'
 "--->>>поиск файлов
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+"Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 "autocomletion
 Plug 'lifepillar/vim-mucomplete'
 
+" --->>>  highlight
+Plug 'pangloss/vim-javascript'
+Plug 'leafOfTree/vim-vue-plugin'
+Plug 'cakebaker/scss-syntax.vim'
 endif
 
 if has('nvim')

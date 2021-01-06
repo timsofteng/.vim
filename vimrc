@@ -14,7 +14,9 @@ source $HOME/.vim/vim-plug/plugins.vim
 
 
 "Plugins configs
-"source $HOME/.vim/plug-config/fzf.vim
+source $HOME/.vim/plug-config/prosession.vim
+source $HOME/.vim/plug-config/fzf.vim
+"source $HOME/.vim/plug-config/clap.vim
 source $HOME/.vim/plug-config/floaterm.vim
 source $HOME/.vim/plug-config/maximizer.vim
 source $HOME/.vim/plug-config/ctrlsf.vim
@@ -31,7 +33,6 @@ source $HOME/.vim/plug-config/undotree.vim
 "source $HOME/.vim/plug-config/neomake.vim
 if !has('nvim')
 source $HOME/.vim/plug-config/ale.vim
-source $HOME/.vim/plug-config/clap.vim
 source $HOME/.vim/plug-config/mucomplete.vim
 endif
 if has('nvim')
@@ -40,7 +41,10 @@ endif
 
 
 set autoread " detect when a file is changed
-"au BufEnter * :checktime
+
+"autocmd!
+"  autocmd BufEnter,FocusGained * silent! checktime
+"augroup END
 
 "added dialog before closing buffers
 set confirm
@@ -54,8 +58,8 @@ set ttymouse=sgr
 
 set tabstop=2 shiftwidth=2 expandtab
 
-set nocompatible
-filetype off
+"set nocompatible
+"filetype off
 
 set diffopt+=vertical  " Always use vertical diffs
 
@@ -76,27 +80,28 @@ set scrolloff=5 "scroll page from 5 top/bottom line
 
 
 "Частота обновления вима
-set updatetime=300
+"set updatetime=300
 
 " Display command line’s tab complete options as a menu
 set wildmenu
 
 "For correct appear in st-term
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+" endif
 
-set termguicolors
-"set t_Co=256
 " Colorscheme
 set background=dark
 "set background=light
 "colorscheme solarized8
-colorscheme gruvbox8_soft
-"colorscheme gruvbox
+"colorscheme gruvbox8_soft
+colorscheme gruvbox
 
 set encoding=utf-8
 " Set font competable with icons
-set guifont=DejavuSansMono\ Nerd\ Font\ 10
+"set guifont=DejavuSansMono\ Nerd\ Font\ 10
 
 "Disable ability change all letters to lowercase
 "in visual mode by press "u"
@@ -108,15 +113,16 @@ vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 nnoremap <Esc><Esc> :noh <CR>
 
 "remap leader key
-"let mapleader="'"
+let mapleader=" "
+nnoremap <SPACE> <Nop>
 
 "js
 "hi def link jsObjectKey Type
 
 "vue
-let g:vim_vue_plugin_use_scss = 1
-let g:vim_vue_plugin_load_full_syntax = 1
-let g:vim_vue_plugin_highlight_vue_attr = 1
+"let g:vim_vue_plugin_use_scss = 1
+"let g:vim_vue_plugin_load_full_syntax = 1
+"let g:vim_vue_plugin_highlight_vue_attr = 1
 
 syntax enable
-syntax sync fromstart
+"syntax sync fromstart
