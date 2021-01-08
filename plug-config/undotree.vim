@@ -1,5 +1,5 @@
 if has("persistent_undo")
-    set undodir=$HOME."/.vim/undodir"
+    set undodir=$HOME/.vim/undodir"
     set undofile
 endif
 

@@ -1,6 +1,8 @@
 call plug#begin('~/.vim/plugged')
 "starting menu
 "Plug 'mhinz/vim-startify'
+"su write and read files
+Plug 'lambdalisue/suda.vim'
 " Files tree
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
@@ -13,14 +15,14 @@ Plug 'lambdalisue/fern-git-status.vim'
 "Floating terminal
 "Plug 'voldikss/vim-floaterm'
 
-Plug 'szw/vim-maximizer'
-
 "Tmux
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
+"BUFFERS
 "closing buffer without closing window
 "Plug 'qpkorr/vim-bufkill'
-
+Plug 'arithran/vim-delete-hidden-buffers'
+Plug 'szw/vim-maximizer'
 
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'natebosch/vim-lsc'
@@ -44,7 +46,8 @@ Plug 'jiangmiao/auto-pairs'
 "autoclosing tags
 Plug 'alvan/vim-closetag'
 "jump beetwen tags
-Plug 'adelarsq/vim-matchit'
+"Plug 'adelarsq/vim-matchit'
+Plug 'andymass/vim-matchup'
 "surrounder
 Plug 'tpope/vim-surround'
 "align
