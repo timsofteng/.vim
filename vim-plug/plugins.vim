@@ -32,6 +32,7 @@ Plug 'szw/vim-maximizer'
 "Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'prabirshrestha/asyncomplete-lsp.vim'
 "Linters 
+"Plug 'prettier/vim-prettier'
 
 "finder in single buffer
 Plug 'dyng/ctrlsf.vim'
@@ -93,10 +94,13 @@ Plug 'lifepillar/vim-mucomplete'
 
 " --->>>  highlight
 Plug 'pangloss/vim-javascript'
-Plug 'leafOfTree/vim-vue-plugin'
 Plug 'cakebaker/scss-syntax.vim'
+
+Plug 'leafgarland/typescript-vim'
+Plug 'MaxMEllon/vim-jsx-pretty'
 endif
 
+Plug 'leafOfTree/vim-vue-plugin'
 if has('nvim')
   Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'neovim/nvim-lspconfig'

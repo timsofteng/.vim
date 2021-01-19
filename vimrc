@@ -2,6 +2,9 @@
 "set runtimepath^=~/.config/vim
 "set runtimepath+=~/.config/vim
 
+"fix npm watch issue
+set backupcopy=yes
+
 "ingore system locale
 language messages C
 
