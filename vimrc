@@ -27,7 +27,7 @@ source $HOME/.vim/plug-config/delete-hidden-buffers.vim
 source $HOME/.vim/plug-config/ctrlsf.vim
 source $HOME/.vim/plug-config/closetag.vim
 "source $HOME/.vim/plug-config/coc.vim
-"source $HOME/.vim/plug-config/lsc.vim
+source $HOME/.vim/plug-config/lsc.vim
 source $HOME/.vim/plug-config/fern.vim
 source $HOME/.vim/plug-config/gina.vim
 source $HOME/.vim/plug-config/startify.vim
@@ -38,7 +38,7 @@ source $HOME/.vim/plug-config/crystalline.vim
 "source $HOME/.vim/plug-config/neomake.vim
 if !has('nvim')
 source $HOME/.vim/plug-config/ale.vim
-source $HOME/.vim/plug-config/mucomplete.vim
+"source $HOME/.vim/plug-config/mucomplete.vim
 endif
 if has('nvim')
 source $HOME/.vim/plug-config/telescope.nvim
@@ -99,8 +99,8 @@ set wildmenu
 set background=dark
 "set background=light
 "colorscheme solarized8
-"colorscheme gruvbox8_soft
-colorscheme gruvbox
+colorscheme gruvbox8_soft
+"colorscheme gruvbox
 
 set encoding=utf-8
 " Set font competable with icons
@@ -115,4 +115,4 @@ set encoding=utf-8
 "let g:vim_vue_plugin_highlight_vue_attr = 1
 
 syntax enable
-"syntax sync fromstart
+syntax sync fromstart

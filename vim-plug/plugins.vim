@@ -25,14 +25,14 @@ Plug 'arithran/vim-delete-hidden-buffers'
 Plug 'szw/vim-maximizer'
 
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'natebosch/vim-lsc'
-"Plug 'ajh17/VimCompletesMe'
+Plug 'natebosch/vim-lsc'
+Plug 'ajh17/VimCompletesMe'
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'mattn/vim-lsp-settings'
 "Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'prabirshrestha/asyncomplete-lsp.vim'
 "Linters 
-"Plug 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier'
 
 "finder in single buffer
 Plug 'dyng/ctrlsf.vim'
@@ -70,8 +70,8 @@ Plug 'rbong/vim-crystalline'
 "solarized themes
 "Plug 'lifepillar/vim-solarized8'
 "gruvbox theme
-Plug 'morhetz/gruvbox'
-"Plug 'lifepillar/vim-gruvbox8'
+"Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-gruvbox8'
 
 " --->>> корневая дирректория проекта
 Plug 'airblade/vim-rooter'
@@ -84,19 +84,20 @@ Plug 'dhruvasagar/vim-prosession'
 "Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 if !has('nvim')
-Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
 "--->>>поиск файлов
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 "Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 "autocomletion
-Plug 'lifepillar/vim-mucomplete'
+"Plug 'lifepillar/vim-mucomplete'
 
 " --->>>  highlight
 Plug 'pangloss/vim-javascript'
 Plug 'cakebaker/scss-syntax.vim'
 
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'MaxMEllon/vim-jsx-pretty'
 endif
 

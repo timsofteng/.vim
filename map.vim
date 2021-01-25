@@ -1,5 +1,5 @@
 "remap leader key
-"let mapleader=" "
+let mapleader="'"
 "nnoremap <SPACE> <Nop>
 
 " Edit vimr configuration file
