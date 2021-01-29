@@ -1,43 +1,132 @@
 call plug#begin('~/.vim/plugged')
+"=== Project and Sessions =======+===================
+"root directory
+Plug 'airblade/vim-rooter'
+
+"sessions
+Plug 'tpope/vim-obsession'
+Plug 'dhruvasagar/vim-prosession'
+"Plug 'leafOfTree/vim-project'
+
 "starting menu
 "Plug 'mhinz/vim-startify'
-"su write and read files
-Plug 'lambdalisue/suda.vim'
-" Files tree
+
+"history tree
+"Plug 'mbbill/undotree'
+"====================================================
+
+
+
+"=== File Tree ======================================
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
-
 "icons
 "Plug 'lambdalisue/nerdfont.vim'
 "Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 "Plug 'lambdalisue/glyph-palette.vim'
+"====================================================
 
-"Floating terminal
-"Plug 'voldikss/vim-floaterm'
 
-"Tmux
-Plug 'tmux-plugins/vim-tmux-focus-events'
 
-"BUFFERS
+"=== Buffers ========================================
 "closing buffer without closing window
 "Plug 'qpkorr/vim-bufkill'
 Plug 'arithran/vim-delete-hidden-buffers'
 Plug 'szw/vim-maximizer'
+"====================================================
 
+
+
+"=== LSP and Completion =============================
+if !has('nvim')
+"language servers
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'natebosch/vim-lsc'
-Plug 'ajh17/VimCompletesMe'
+"Plug 'ajh17/VimCompletesMe'
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'mattn/vim-lsp-settings'
 "Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'prabirshrestha/asyncomplete-lsp.vim'
-"Linters 
-Plug 'prettier/vim-prettier'
+"Plug 'lifepillar/vim-mucomplete'
+endif
 
+if has('nvim')
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'nvim-lua/completion-nvim'
+  "Plug 'hrsh7th/nvim-compe'
+
+endif
+"====================================================
+
+
+
+"=== Linters ========================================
+if !has('nvim')
+"Plug 'dense-analysis/ale'
+Plug 'prettier/vim-prettier'
+endif
+"====================================================
+
+
+
+"=== Search ========================================
 "finder in single buffer
 Plug 'dyng/ctrlsf.vim'
-"emmet
-Plug 'mattn/emmet-vim'
+if has('nvim')
+"--->>>поиск файлов
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+"Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+endif
+
+if has('nvim')
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+endif
+"====================================================
+
+
+
+"=== Git ============================================
+Plug 'lambdalisue/gina.vim'
+Plug 'mhinz/vim-signify'
+"====================================================
+
+
+
+"=== Appearence =====================================
+"themes
+"Plug 'lifepillar/vim-solarized8'
+Plug 'morhetz/gruvbox'
+"Plug 'lifepillar/vim-gruvbox8'
+"Stautus bar
+Plug 'rbong/vim-crystalline'
+"align
+Plug 'junegunn/vim-easy-align'
+"====================================================
+
+
+"=== Syntax Highlight ===============================
+if has('nvim')
+  Plug 'nvim-treesitter/nvim-treesitter'
+endif
+if !has('nvim')
+Plug 'pangloss/vim-javascript'
+Plug 'cakebaker/scss-syntax.vim'
+"Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'leafOfTree/vim-vue-plugin'
+endif
+"css colors
+"Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+"====================================================
+
+
+
+
+"=== Code Format ====================================
 "commenting tool
 Plug 'tomtom/tcomment_vim'
 "--->>>парные ковычки
@@ -51,65 +140,40 @@ Plug 'alvan/vim-closetag'
 Plug 'andymass/vim-matchup'
 "surrounder
 Plug 'tpope/vim-surround'
-"align
-Plug 'junegunn/vim-easy-align'
 "repeat by "." for custom plugins
 Plug 'tpope/vim-repeat'
-"Gina git
-Plug 'lambdalisue/gina.vim'
-"--->>>изменения в файле в сравнении с git
-Plug 'mhinz/vim-signify'
+"====================================================
 
 
-"--->>>Панель состояния
-Plug 'rbong/vim-crystalline'
 
-"history tree
-"Plug 'mbbill/undotree'
+"=== Snippets & Emmet =======+=======================
+"snippets
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
 
-"solarized themes
-"Plug 'lifepillar/vim-solarized8'
-"gruvbox theme
-"Plug 'morhetz/gruvbox'
-Plug 'lifepillar/vim-gruvbox8'
+"emmet
+Plug 'mattn/emmet-vim'
+"====================================================
 
-" --->>> корневая дирректория проекта
-Plug 'airblade/vim-rooter'
 
-"sessions
-"Plug 'leafOfTree/vim-project'
-Plug 'tpope/vim-obsession'
-Plug 'dhruvasagar/vim-prosession'
+"=== Internal Terminal ======+=======================
+"Floating terminal
+"Plug 'voldikss/vim-floaterm'
+"====================================================
 
-"Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
-if !has('nvim')
-"Plug 'dense-analysis/ale'
-"--->>>поиск файлов
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-"Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
-"autocomletion
-"Plug 'lifepillar/vim-mucomplete'
+"=== Tmux Integration =======+=======================
+Plug 'tmux-plugins/vim-tmux-focus-events'
+"====================================================
 
-" --->>>  highlight
-Plug 'pangloss/vim-javascript'
-Plug 'cakebaker/scss-syntax.vim'
 
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'MaxMEllon/vim-jsx-pretty'
-endif
-
-Plug 'leafOfTree/vim-vue-plugin'
-if has('nvim')
-  Plug 'nvim-treesitter/nvim-treesitter'
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'nvim-lua/completion-nvim'
-  Plug 'nvim-lua/popup.nvim'
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-telescope/telescope.nvim'
-endif
-
+"=== Debug ==================+=======================
 "Plug 'tyru/capture.vim'
+"====================================================
+
+
+
+
+
+
 call plug#end()

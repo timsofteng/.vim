@@ -99,8 +99,8 @@ set wildmenu
 set background=dark
 "set background=light
 "colorscheme solarized8
-colorscheme gruvbox8_soft
-"colorscheme gruvbox
+"colorscheme gruvbox8_soft
+colorscheme gruvbox
 
 set encoding=utf-8
 " Set font competable with icons
