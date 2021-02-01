@@ -8,6 +8,9 @@ Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
 "Plug 'leafOfTree/vim-project'
 
+"UNIX command in vim
+Plug 'tpope/vim-eunuch'
+
 "starting menu
 "Plug 'mhinz/vim-startify'
 
@@ -33,6 +36,7 @@ Plug 'lambdalisue/fern-git-status.vim'
 "Plug 'qpkorr/vim-bufkill'
 Plug 'arithran/vim-delete-hidden-buffers'
 Plug 'szw/vim-maximizer'
+"Plug 'dhruvasagar/vim-zoom'
 "====================================================
 
 
@@ -50,10 +54,10 @@ Plug 'natebosch/vim-lsc'
 "Plug 'lifepillar/vim-mucomplete'
 endif
 
+"Plug 'hrsh7th/nvim-compe'
 if has('nvim')
   Plug 'neovim/nvim-lspconfig'
   Plug 'nvim-lua/completion-nvim'
-  "Plug 'hrsh7th/nvim-compe'
 
 endif
 "====================================================
@@ -63,8 +67,8 @@ endif
 "=== Linters ========================================
 if !has('nvim')
 "Plug 'dense-analysis/ale'
-Plug 'prettier/vim-prettier'
 endif
+Plug 'prettier/vim-prettier'
 "====================================================
 
 
@@ -72,7 +76,7 @@ endif
 "=== Search ========================================
 "finder in single buffer
 Plug 'dyng/ctrlsf.vim'
-if has('nvim')
+if !has('nvim')
 "--->>>поиск файлов
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -102,8 +106,6 @@ Plug 'morhetz/gruvbox'
 "Plug 'lifepillar/vim-gruvbox8'
 "Stautus bar
 Plug 'rbong/vim-crystalline'
-"align
-Plug 'junegunn/vim-easy-align'
 "====================================================
 
 
@@ -114,9 +116,9 @@ endif
 if !has('nvim')
 Plug 'pangloss/vim-javascript'
 Plug 'cakebaker/scss-syntax.vim'
-"Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'leafgarland/typescript-vim'
+"Plug 'peitalin/vim-jsx-typescript'
+"Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'leafOfTree/vim-vue-plugin'
 endif
 "css colors
@@ -136,17 +138,19 @@ Plug 'jiangmiao/auto-pairs'
 "autoclosing tags
 Plug 'alvan/vim-closetag'
 "jump beetwen tags
-"Plug 'adelarsq/vim-matchit'
+Plug 'adelarsq/vim-matchit'
 Plug 'andymass/vim-matchup'
 "surrounder
 Plug 'tpope/vim-surround'
 "repeat by "." for custom plugins
 Plug 'tpope/vim-repeat'
+"align
+Plug 'junegunn/vim-easy-align'
 "====================================================
 
 
 
-"=== Snippets & Emmet =======+=======================
+"=== Snippets & Emmet ===============================
 "snippets
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
@@ -156,22 +160,20 @@ Plug 'mattn/emmet-vim'
 "====================================================
 
 
-"=== Internal Terminal ======+=======================
+"=== Internal Terminal ==============================
 "Floating terminal
 "Plug 'voldikss/vim-floaterm'
 "====================================================
 
 
-"=== Tmux Integration =======+=======================
+"=== Tmux Integration ===============================
 Plug 'tmux-plugins/vim-tmux-focus-events'
 "====================================================
 
 
-"=== Debug ==================+=======================
+"=== Debug ==========================================
 "Plug 'tyru/capture.vim'
 "====================================================
-
-
 
 
 
