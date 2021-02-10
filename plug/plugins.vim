@@ -103,7 +103,8 @@ Plug 'mhinz/vim-signify'
 "themes
 "Plug 'lifepillar/vim-solarized8'
 Plug 'morhetz/gruvbox'
-"Plug 'lifepillar/vim-gruvbox8'
+Plug 'lifepillar/vim-gruvbox8'
+Plug 'crusoexia/vim-monokai'
 "Stautus bar
 Plug 'rbong/vim-crystalline'
 "====================================================
@@ -135,7 +136,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'jiangmiao/auto-pairs'
 "html matched tags highlight
 "Plug 'leafOfTree/vim-matchtag'
-"autoclosing tags
+"autoclosingder tags
 Plug 'alvan/vim-closetag'
 "jump beetwen tags
 Plug 'adelarsq/vim-matchit'
@@ -149,6 +150,13 @@ Plug 'junegunn/vim-easy-align'
 "====================================================
 
 
+"=== Writers work ==:================================
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+"markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+"====================================================
 
 "=== Snippets & Emmet ===============================
 "snippets
