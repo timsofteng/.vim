@@ -3,7 +3,6 @@ set completeopt=menu,menuone,noinsert,noselect
 "Use all the defaults (recommended):
 let g:lsc_auto_map = v:true
 
-autocmd BufNewFile,BufRead *.tsx setlocal filetype=typescript
 let g:lsc_server_commands = {
  \ 'html': 'html-languageserver --stdio',
  \ 'css': 'css-languageserver --stdio',
@@ -11,6 +10,9 @@ let g:lsc_server_commands = {
  \    'command': 'typescript-language-server --stdio',
  \  },
  \  'typescript': {
+ \    'command': 'typescript-language-server --stdio',
+ \  },
+ \  'typescriptreact': {
  \    'command': 'typescript-language-server --stdio',
  \  },
  \  'vue': 'vls',

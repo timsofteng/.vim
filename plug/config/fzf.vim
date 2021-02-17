@@ -1,6 +1,6 @@
 nnoremap <Leader>ff :Files <CR>
 nnoremap <Leader>bb :Buffers <CR>
-nnoremap <Leader>rg :Rg <CR>
+nnoremap <Leader>fr :Rg <CR>
 
 let g:fzf_action = {
       \'ctrl-s': 'split', 
@@ -19,4 +19,4 @@ function GrepVisualSelection()
     return line
 endfunction
 
-vnoremap <silent> <leader>rg :<C-U>Rg <C-R>=GrepVisualSelection()<CR><CR>
+vnoremap <silent> <leader>fr :<C-U>Rg <C-R>=GrepVisualSelection()<CR><CR>

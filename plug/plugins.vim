@@ -44,7 +44,7 @@ Plug 'szw/vim-maximizer'
 if !has('nvim')
 "language servers
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc'
 "Plug 'ajh17/VimCompletesMe'
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'mattn/vim-lsp-settings'
@@ -138,7 +138,7 @@ Plug 'jiangmiao/auto-pairs'
 "autoclosingder tags
 Plug 'alvan/vim-closetag'
 "jump beetwen tags
-Plug 'adelarsq/vim-matchit'
+"Plug 'adelarsq/vim-matchit'
 Plug 'andymass/vim-matchup'
 "surrounder
 Plug 'tpope/vim-surround'
@@ -182,7 +182,8 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 "=== Debug ==========================================
 "Plug 'tyru/capture.vim'
 "====================================================
-
+"Plug 'takac/vim-hardtime'
+"let g:hardtime_default_on = 1
 
 
 
