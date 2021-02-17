@@ -36,7 +36,6 @@ Plug 'lambdalisue/fern-git-status.vim'
 "Plug 'qpkorr/vim-bufkill'
 Plug 'arithran/vim-delete-hidden-buffers'
 Plug 'szw/vim-maximizer'
-"Plug 'dhruvasagar/vim-zoom'
 "====================================================
 
 
@@ -154,9 +153,9 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 "markdown
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'   }
+"Plug 'godlygeek/tabular'
+"Plug 'plasticboy/vim-markdown'
+"Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'   }
 "====================================================
 
 "=== Snippets & Emmet ===============================

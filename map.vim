@@ -18,10 +18,3 @@ nnoremap <Esc><Esc> :noh <CR>
 
 "write with sudo 
 command -nargs=0 SUw w !sudo tee %
-
-"display numbers in:visual mode
-"vnoremap <Esc> <Esc>:set nu nornu<CR>
-"au CursorMoved * if mode() !~# "[vV\<C-v>]" | set nu nornu | endif
-"nnoremap <silent> v v:<C-u>set nonu rnu<CR>gv
-"nnoremap <silent> V V:<C-u>set nonu rnu<CR>gv
-"nnoremap <silent> <C-v> <C-v>:<C-u>set nonu rnu<CR>gv

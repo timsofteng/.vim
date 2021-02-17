@@ -1,15 +1,8 @@
-"set runtimepath-=~/.vim runtimepath-=~/.vim/after
-"set runtimepath^=~/.config/vim
-"set runtimepath+=~/.config/vim
-
-"set nocompatible
-"filetype off
-"
-"fix npm watch issue
-set backupcopy=yes
-
 "ingore system locale
 language messages C
+
+"fix npm watch issue
+set backupcopy=yes
 
 " allow buffer switching without saving
 "set hidden
@@ -19,8 +12,6 @@ set confirm
 
 "maping keys and shortcuts
 source $HOME/.vim/map.vim
-
-
 "plug
 source $HOME/.vim/plug/plugins.vim
 "plugins config file
@@ -77,9 +68,6 @@ set background=dark
 "colorscheme solarized8
 colorscheme gruvbox8
 let g:gruvbox_transp_bg = 1
-
-"colorscheme gruvbox
-"g:gruvbox_italic=1
 
 set encoding=utf-8
 " Set font competable with icons
