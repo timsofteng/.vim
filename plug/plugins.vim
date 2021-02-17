@@ -1,11 +1,11 @@
 call plug#begin('~/.vim/plugged')
 "=== Project and Sessions =======+===================
 "root directory
-Plug 'airblade/vim-rooter'
+"Plug 'airblade/vim-rooter'
 
 "sessions
 Plug 'tpope/vim-obsession'
-Plug 'dhruvasagar/vim-prosession'
+"Plug 'dhruvasagar/vim-prosession'
 "Plug 'leafOfTree/vim-project'
 
 "UNIX command in vim
@@ -45,7 +45,7 @@ Plug 'szw/vim-maximizer'
 if !has('nvim')
 "language servers
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'natebosch/vim-lsc'
+"Plug 'natebosch/vim-lsc'
 "Plug 'ajh17/VimCompletesMe'
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'mattn/vim-lsp-settings'
@@ -156,6 +156,7 @@ Plug 'junegunn/limelight.vim'
 "markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'   }
 "====================================================
 
 "=== Snippets & Emmet ===============================
