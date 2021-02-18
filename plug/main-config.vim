@@ -7,6 +7,7 @@ source $HOME/.vim/plug/config/maximizer.vim
 source $HOME/.vim/plug/config/delete-hidden-buffers.vim
 source $HOME/.vim/plug/config/ctrlsf.vim
 source $HOME/.vim/plug/config/closetag.vim
+source $HOME/.vim/plug/config/prettier.vim
 "source $HOME/.vim/plug/config/coc.vim
 source $HOME/.vim/plug/config/lsc.vim
 source $HOME/.vim/plug/config/fern.vim

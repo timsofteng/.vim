@@ -134,11 +134,9 @@ Plug 'tomtom/tcomment_vim'
 "--->>>парные ковычки
 Plug 'jiangmiao/auto-pairs'
 "html matched tags highlight
-"Plug 'leafOfTree/vim-matchtag'
 "autoclosingder tags
 Plug 'alvan/vim-closetag'
 "jump beetwen tags
-"Plug 'adelarsq/vim-matchit'
 Plug 'andymass/vim-matchup'
 "surrounder
 Plug 'tpope/vim-surround'
