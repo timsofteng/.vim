@@ -10,7 +10,6 @@ source $HOME/.vim/plug/config/prettier.vim
 source $HOME/.vim/plug/config/lsc.vim
 source $HOME/.vim/plug/config/fern.vim
 source $HOME/.vim/plug/config/gina.vim
-source $HOME/.vim/plug/config/startify.vim
 source $HOME/.vim/plug/config/signify.vim
 source $HOME/.vim/plug/config/crystalline.vim
 "source $HOME/.vim/plug/config/undotree.vim

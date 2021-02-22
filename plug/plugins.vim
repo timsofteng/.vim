@@ -10,9 +10,6 @@ Plug 'tpope/vim-obsession'
 "UNIX command in vim
 Plug 'tpope/vim-eunuch'
 
-"starting menu
-"Plug 'mhinz/vim-startify'
-
 "history tree
 "Plug 'mbbill/undotree'
 "====================================================
