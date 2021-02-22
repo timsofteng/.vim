@@ -5,7 +5,6 @@ call plug#begin('~/.vim/plugged')
 
 "sessions
 Plug 'tpope/vim-obsession'
-"Plug 'dhruvasagar/vim-prosession'
 "Plug 'leafOfTree/vim-project'
 
 "UNIX command in vim
