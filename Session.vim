@@ -21,7 +21,6 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt plug/plugins.vim
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -31,18 +30,18 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 23) / 47)
+let s:l = 18 - ((17 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 18
 normal! 0
 tabnext 1
-badd +86 plug/plugins.vim
-badd +61 vimrc
+badd +19 plug/plugins.vim
+badd +1 vimrc
 badd +1 plug/config/prettier.vim
-badd +4 plug/main-config.vim
-badd +2 ~/.vim/Session.vim
+badd +16 plug/main-config.vim
+badd +2 Session.vim
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
