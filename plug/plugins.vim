@@ -16,6 +16,7 @@ Plug 'tpope/vim-eunuch'
 
 "history tree
 "Plug 'mbbill/undotree'
+Plug 'mcchrish/nnn.vim'
 "====================================================
 
 

@@ -1,1 +1,1 @@
-nnoremap <Leader>c= :Prettier<CR>
+nnoremap <Leader>= :Prettier<CR>
