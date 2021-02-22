@@ -94,7 +94,6 @@ Plug 'mhinz/vim-signify'
 "Plug 'lifepillar/vim-solarized8'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-gruvbox8'
-Plug 'crusoexia/vim-monokai'
 "Stautus bar
 Plug 'rbong/vim-crystalline'
 "====================================================

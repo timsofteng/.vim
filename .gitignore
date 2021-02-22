@@ -1,5 +1,4 @@
 plugged/*
 autoload/*
-vim-project-config/*
 pack/*
-session/*
+Session.vim

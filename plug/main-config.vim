@@ -13,7 +13,6 @@ source $HOME/.vim/plug/config/gina.vim
 source $HOME/.vim/plug/config/signify.vim
 source $HOME/.vim/plug/config/crystalline.vim
 "source $HOME/.vim/plug/config/undotree.vim
-"source $HOME/.vim/plug/config/neomake.vim
 if !has('nvim')
 source $HOME/.vim/plug/config/ale.vim
 "source $HOME/.vim/plug/config/mucomplete.vim
