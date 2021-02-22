@@ -11,7 +11,7 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-edit vimrc
+edit plug/main-config.vim
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -21,7 +21,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt plug/plugins.vim
+balt vimrc
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -31,14 +31,14 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 7 - ((6 * winheight(0) + 23) / 47)
+let s:l = 1 - ((0 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 7
+keepjumps 1
 normal! 0
 tabnext 1
-badd +0 vimrc
+badd +7 vimrc
 badd +12 plug/plugins.vim
 badd +1 plug/config/prettier.vim
 badd +16 plug/main-config.vim
