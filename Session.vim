@@ -11,14 +11,11 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-edit plug/config/fzf.vim
+edit plug/plugins.vim
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
-wincmd _ | wincmd |
-vsplit
-2wincmd h
-wincmd w
+1wincmd h
 wincmd w
 set nosplitbelow
 set nosplitright
@@ -27,11 +24,9 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 64 + 96) / 192)
-exe 'vert 2resize ' . ((&columns * 63 + 96) / 192)
-exe 'vert 3resize ' . ((&columns * 63 + 96) / 192)
+wincmd =
 argglobal
-balt vimrc
+balt plug/main-config.vim
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -41,35 +36,16 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 8 - ((7 * winheight(0) + 23) / 47)
+let s:l = 86 - ((26 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 8
-normal! 0
-wincmd w
-argglobal
-if bufexists("plug/config/fzf.vim") | buffer plug/config/fzf.vim | else | edit plug/config/fzf.vim | endif
-balt vimrc
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let s:l = 7 - ((6 * winheight(0) + 23) / 47)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 7
+keepjumps 86
 normal! 0
 wincmd w
 argglobal
 if bufexists("vimrc") | buffer vimrc | else | edit vimrc | endif
-balt plug/config/lsc.vim
+balt plug/plugins.vim
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -86,13 +62,13 @@ normal! zt
 keepjumps 1
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 64 + 96) / 192)
-exe 'vert 2resize ' . ((&columns * 63 + 96) / 192)
-exe 'vert 3resize ' . ((&columns * 63 + 96) / 192)
+wincmd =
 tabnext 1
-badd +60 vimrc
+badd +2 plug/plugins.vim
+badd +61 vimrc
 badd +1 plug/config/prettier.vim
-badd +0 plug/config/fzf.vim
+badd +9 fern://drawer:1/file:///home/tim/.vim;\$
+badd +4 plug/main-config.vim
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -104,7 +80,6 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
-nohlsearch
 let g:this_session = v:this_session
 let g:this_obsession = v:this_session
 doautoall SessionLoadPost

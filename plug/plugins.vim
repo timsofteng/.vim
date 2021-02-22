@@ -80,7 +80,6 @@ if !has('nvim')
 "--->>>поиск файлов
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 endif
 
 if has('nvim')

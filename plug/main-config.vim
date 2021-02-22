@@ -1,7 +1,6 @@
 "Plugins configs
 source $HOME/.vim/plug/config/prosession.vim
 source $HOME/.vim/plug/config/fzf.vim
-"source $HOME/.vim/plug/config/clap.vim
 "source $HOME/.vim/plug/config/floaterm.vim
 source $HOME/.vim/plug/config/maximizer.vim
 source $HOME/.vim/plug/config/delete-hidden-buffers.vim
