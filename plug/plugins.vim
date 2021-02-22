@@ -1,8 +1,5 @@
 call plug#begin('~/.vim/plugged')
 "=== Project and Sessions =======+===================
-"root directory
-"Plug 'airblade/vim-rooter'
-
 "sessions
 Plug 'tpope/vim-obsession'
 "Plug 'leafOfTree/vim-project'
