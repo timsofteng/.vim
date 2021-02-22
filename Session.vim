@@ -11,12 +11,8 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-edit plug/plugins.vim
+edit vimrc
 set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
@@ -24,27 +20,7 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-wincmd =
 argglobal
-balt plug/main-config.vim
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let s:l = 86 - ((26 * winheight(0) + 23) / 47)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 86
-normal! 0
-wincmd w
-argglobal
-if bufexists("vimrc") | buffer vimrc | else | edit vimrc | endif
 balt plug/plugins.vim
 setlocal fdm=manual
 setlocal fde=0
@@ -61,14 +37,12 @@ keepjumps exe s:l
 normal! zt
 keepjumps 1
 normal! 0
-wincmd w
-wincmd =
 tabnext 1
-badd +2 plug/plugins.vim
+badd +86 plug/plugins.vim
 badd +61 vimrc
 badd +1 plug/config/prettier.vim
-badd +9 fern://drawer:1/file:///home/tim/.vim;\$
 badd +4 plug/main-config.vim
+badd +2 ~/.vim/Session.vim
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
