@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 "=== Project and Sessions =======+===================
 "sessions
 Plug 'tpope/vim-obsession'
-"Plug 'leafOfTree/vim-project'
 
 "UNIX command in vim
 Plug 'tpope/vim-eunuch'

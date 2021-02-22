@@ -11,12 +11,8 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-edit plug/plugins.vim
+edit vimrc
 set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
@@ -24,28 +20,7 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)
-exe 'vert 2resize ' . ((&columns * 95 + 96) / 192)
 argglobal
-balt plug/main-config.vim
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let s:l = 3 - ((2 * winheight(0) + 23) / 47)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 3
-normal! 0
-wincmd w
-argglobal
-if bufexists("vimrc") | buffer vimrc | else | edit vimrc | endif
 balt plug/plugins.vim
 setlocal fdm=manual
 setlocal fde=0
@@ -62,14 +37,11 @@ keepjumps exe s:l
 normal! zt
 keepjumps 7
 normal! 0
-wincmd w
-exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)
-exe 'vert 2resize ' . ((&columns * 95 + 96) / 192)
 tabnext 1
 badd +0 vimrc
-badd +13 plug/plugins.vim
+badd +12 plug/plugins.vim
 badd +1 plug/config/prettier.vim
-badd +2 plug/main-config.vim
+badd +16 plug/main-config.vim
 badd +2 Session.vim
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
