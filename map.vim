@@ -1,6 +1,6 @@
 "remap leader key
-"let mapleader="'"
-"nnoremap <SPACE> <Nop>
+let mapleader="\<space>"
+nnoremap <SPACE> <Nop>
 
 " Edit vimr configuration file
 nnoremap confe :vs $MYVIMRC<CR>

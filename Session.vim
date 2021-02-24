@@ -11,7 +11,7 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-edit plug/plugins.vim
+edit map.vim
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -24,9 +24,10 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-wincmd =
+exe 'vert 1resize ' . ((&columns * 95 + 96) / 192)
+exe 'vert 2resize ' . ((&columns * 96 + 96) / 192)
 argglobal
-balt plug/main-config.vim
+balt plug/plugins.vim
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -36,12 +37,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 23) / 47)
+let s:l = 8 - ((7 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 08|
+keepjumps 8
+normal! 012|
 wincmd w
 argglobal
 if bufexists("plug/main-config.vim") | buffer plug/main-config.vim | else | edit plug/main-config.vim | endif
@@ -62,12 +63,15 @@ normal! zt
 keepjumps 16
 normal! 0
 wincmd w
-wincmd =
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 95 + 96) / 192)
+exe 'vert 2resize ' . ((&columns * 96 + 96) / 192)
 tabnext 1
-badd +7 vimrc
-badd +12 plug/plugins.vim
-badd +1 plug/config/prettier.vim
+badd +1 map.vim
+badd +3 plug/plugins.vim
 badd +16 plug/main-config.vim
+badd +7 vimrc
+badd +1 plug/config/prettier.vim
 badd +2 Session.vim
 badd +4 .gitignore
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
@@ -81,6 +85,7 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
 let g:this_session = v:this_session
 let g:this_obsession = v:this_session
 doautoall SessionLoadPost

@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =9
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/tim/.zinit'
 let g:netrw_dirhist_9='/home/tim/.tmux'
 let g:netrw_dirhist_8='/usr/home/tim/.config/sxhkd'
 let g:netrw_dirhist_7='/usr/home/tim/.dbus'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_4='/home/tim/.vim/pack/minpac/opt'
 let g:netrw_dirhist_3='/home/tim/.vim/pack/minpac'
 let g:netrw_dirhist_2='/home/tim/.vim/pack'
 let g:netrw_dirhist_1='/home/tim/.vim'
-let g:netrw_dirhist_0='/home/tim/.vim/plug-config'
