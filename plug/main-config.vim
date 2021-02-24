@@ -2,6 +2,7 @@
 source $HOME/.vim/plug/config/fzf.vim
 "source $HOME/.vim/plug/config/floaterm.vim
 source $HOME/.vim/plug/config/maximizer.vim
+source $HOME/.vim/plug/config/tmux-navigator.vim
 source $HOME/.vim/plug/config/delete-hidden-buffers.vim
 source $HOME/.vim/plug/config/ctrlsf.vim
 source $HOME/.vim/plug/config/closetag.vim

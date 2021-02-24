@@ -169,6 +169,7 @@ Plug 'mattn/emmet-vim'
 
 "=== Tmux Integration ===============================
 Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'christoomey/vim-tmux-navigator'
 "====================================================
 
 
